@@ -3,9 +3,6 @@ import React, { useState } from "react";
 import Logo from '../../images/logo.png'
 
 const DashboardTopNavbar = () => {
-  const [openMenu, setOpenMenu] = useState(null);{
-  };
-
   return (
     <>
       {/* === Blue Header Bar with Company Name === */}
