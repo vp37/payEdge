@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+.employee-header {
+  position: fixed;
+  top: 0;
+  left: 220px; /* Adjust if you have a sidebar */
+  right: 0;
+  height: 65px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  /* border-bottom: 1px solid #e5e7eb; */
+  /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); */
+  font-family: 'Poppins', sans-serif;
+  z-index: 100;
+}
+
+/* === Title === */
+.employee-title {
+  font-size: 18px;
+  color: #111811;
+  letter-spacing: 0.5px;
+  /* border: 1px solid black; */
+}
+
+.bubbleimg{
+  /* width: 100px; */
+  height: 50px;
+  margin-right:720px;
+}
+
+
+
+/* === Quick Links === */
+.quick-links {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.quick-dropdown {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.quick-dropdown:hover {
+  color: #111827;
+}
+
+.dropdown-icon {
+  font-size: 16px;
+}
+
+/* === Dropdown Popup === */
+.dropdown-menu {
+  position: absolute;
+  top: 50px;
+  right: 60px;
+  width: 220px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 10px 0;
+  animation: dropdownFade 0.2s ease-in-out;
+  z-index: 1000;
+}
+
+.dropdown-menu p {
+  margin: 0;
+  padding: 10px 15px;
+  font-size: 14px;
+  color: #374151;
+  transition: background 0.2s, color 0.2s;
+  cursor: pointer;
+}
+
+.dropdown-menu p:hover {
+  background-color: #f3f4f6;
+  color: #1d4ed8;
+}
+
+/* === Icons === */
+.icon {
+  font-size: 18px;
+  color: #6b7280;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.icon:hover {
+  color: #111827;
+}
+
+.bell-icon {
+  position: relative;
+}
+
+.bell-icon::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  width: 6px;
+  height: 6px;
+  background: #ef4444;
+  border-radius: 50%;
+}
+
+/* === Animation === */
+@keyframes dropdownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* === Sidebar Base === */
+.sidebar {
+  position: fixed;
+  width: 220px;
+  background: linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
+  color: #111827;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 22px;
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-right: 1px solid #e5e7eb;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+}
+
+/* === Company Logo === */
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.company-logo {
+  width: 42px;
+  height: 42px;
+  margin-right: 10px;
+}
+
+.sidebar-logo h1 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  letter-spacing: 0.5px;
+}
+
+/* === Profile Section === */
+.profile-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f3f4f6;
+  padding: 10px;
+  margin-bottom: 15px;
+  transition: background 0.3s;
+  margin-left: -20px;
+  width: 216px;
+}
+
+.profile-section:hover {
+  background-color: #e9ebef;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+}
+
+.profile-img {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 2px solid #d1d5db;
+}
+
+.profile-details {
+  margin-left: 10px;
+}
+
+.profile-details h2 {
+  font-size: 13px;
+  margin: 0;
+  font-weight: 500;
+  color: #111827;
+}
+
+.profile-details p {
+  font-size: 11px;
+  color: #2a65db;
+  margin: 0;
+  text-decoration: none;
+  
+}
+.profile-details a {
+  text-decoration: none;       /* remove underline */
+  color: #6b7280;              /* subtle gray text */
+  font-size: 12px;
+  transition: color 0.3s ease; /* smooth hover effect */
+}
+
+.profile-details a:hover {
+  color: #111827;              /* darker on hover */
+  text-decoration: none;       /* still no underline */
+}
+
+.profile-details a.active {
+  color: #111827;              /* highlight when active route */
+  font-weight: 500;
+}
+
+.settings-icon {
+  color: #6b7280;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.settings-icon:hover {
+  color: #111827;
+}
+
+/* === Navigation Links === */
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Each Nav Button */
+.nav-item {
+  width: 215px;
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  color: #6b7280;
+  text-align: left;
+  padding: 15px 12px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+  margin-left: -17px;
+  text-decoration: none;
+}
+
+.nav-item:hover {
+  background-color: #f3f4f6;
+  color: #111827;
+}
+
+.nav-item.active {
+  background-color: #e5e7eb;
+  color: #111827;
+  font-weight: 600;
+}
+
+.nav-icon {
+  margin-right: 18px;
+  font-size: 18px;
+  color: #6b7280;
+}
+
+.nav-item:hover .nav-icon {
+  color: #111827;
+}
+
+/* === Dropdown Buttons === */
+.dropdown {
+  width: 100%;
+}
+
+.dropdown-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* ensures arrow stays on right corner */
+  width: 215px;
+  border: none;
+  background: none;
+  color: #6b7280;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 15px 12px;
+  margin-left: -17px;
+}
+
+.dropdown-btn:hover {
+  background-color: #f3f4f6;
+  color: #111827;
+}
+
+/* Inside dropdown button */
+.dropdown-btn .left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.dropdown-btn .right {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: #6b7280;
+}
+
+/* === Dropdown Content === */
+.dropdown-content {
+  margin-left: 25px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-left: 1px solid #e5e7eb;
+  padding-left: 10px;
+  animation: dropdownFade 0.25s ease-in-out;
+}
+
+@keyframes dropdownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdown-content a {
+  color: #4b5563;
+  text-decoration: none;
+  font-size: 13px;
+  padding: 5px 0;
+  transition: color 0.2s;
+}
+
+.dropdown-content a:hover {
+  color: #111827;
+}
+
+.dropdown-content .active {
+  color: #111827;
+  font-weight: 600;
+}
+
+/* === Section Divider === */
+.nav-divider {
+  height: 1px;
+  background-color: #e5e7eb;
+  margin: 12px 0;
+}

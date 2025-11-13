@@ -1,0 +1,22 @@
+/* === Blue Header Bar === */
+.top-header {
+  background-color: #1d4ed8;
+  text-align: center;
+  padding: 8px 0;
+}
+
+.top-header-content {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+}
+
+.top-header-content h1 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.header-logo {
+  height: 32px;
+}
