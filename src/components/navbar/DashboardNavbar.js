@@ -18,7 +18,6 @@
 
 // export default DashboardTopNavbar;
 
-import React from 'react'
 
 const DashboardNavbar = () => {
   return (

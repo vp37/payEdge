@@ -5,7 +5,7 @@
   min-height: 100vh;
   padding: 10px 30px;
   width: 95%;
-  overflow-y: auto;
+  /* overflow-y: auto; */
 }
 
 /* === Header === */
