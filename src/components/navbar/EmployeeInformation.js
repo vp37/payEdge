@@ -7,7 +7,7 @@ import Bubble from '../../images/bubble.png'
 
 const EmployeeTopNavbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [pageTitle, setPageTitle] = useState("Employee Information");
+  const [pageTitle, setPageTitle] = useState("");
 
   const location = useLocation();
 
@@ -18,6 +18,7 @@ const EmployeeTopNavbar = () => {
       "/todo/my-tasks": "My Tasks",
       "/todo/completed": "Completed Tasks",
       "/salary/payslips": "Payslips",
+      "/salary/payslips/generator/": "Payslips",
       "/salary/report": "Salary Report",
       "/leave/apply": "Apply Leave",
       "/leave/history": "Leave History",
@@ -27,6 +28,18 @@ const EmployeeTopNavbar = () => {
       "/people": "People",
       "/employeelayout": "Employee Information",
     };
+
+     if (
+  location.pathname.startsWith("/salary/payslips") ||
+  location.pathname.startsWith("/salary/upload") ||
+  location.pathname.startsWith("/salary/list") ||
+  location.pathname.startsWith("/salary/arrears") ||
+  location.pathname.startsWith("/salary/salary-structure") ||
+  location.pathname.startsWith("/salary/payslip-history")
+) {
+  setPageTitle("Payslips");
+  return;
+}
 
     // default title if route not listed
     setPageTitle(routeTitles[location.pathname] || "Employee Information");
