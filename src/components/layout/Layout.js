@@ -3,6 +3,7 @@ import Navbar from "../navbar/Navbar";
 import "./Layout.css";
 import EmployeeInformation from "../navbar/EmployeeInformation";
 
+
 const Layout = () => {
   return (
     <div className="layout-container">

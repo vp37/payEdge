@@ -10,6 +10,10 @@ import Family from '../employeepages/Family'
 import EmployJob from '../employeepages/EmployJob'
 import Assets from '../employeepages/Assets'
 import EmployeeLayout from '../components/layout/EmployeeLayout'
+import PaySlips from '../salarypages/admin/PaySlips';
+import AdminLayout from '../components/layout/AdminLayout';
+import Generator_Payslips from '../salarypages/admin/Generator_Payslips';
+import Upload_File from '../salarypages/admin/Upload_File'
 
 const Router = () => {
   const router = createBrowserRouter([
@@ -33,28 +37,50 @@ const Router = () => {
               element: <Home />,  // Protected Home page
             },
             {
+              path: '/salary/payslips',
+              element: <PaySlips />
+            },
+            {
+              path: 'salary',
+              element: <AdminLayout />,  // Admin layout here
+              children: [
+                {
+                  index:"true",
+                  element: <Generator_Payslips />,
+                },
+                {
+                  path: 'payslips/generator',
+                  element: <Generator_Payslips />,
+                },
+                {
+                  path: 'upload',
+                  element: <Upload_File />,
+                },
+              ],
+            },
+            {
               path: '/employeelayout',
               element: <EmployeeLayout />,
-              children:[
+              children: [
                 {
                   index: true,
-                  element:<Personal/>
+                  element: <Personal />
                 },
                 {
-                  path:'accounts',
-                  element:<Accounts/>
+                  path: 'accounts',
+                  element: <Accounts />
                 },
                 {
-                  path:'family',
-                  element:<Family/>
+                  path: 'family',
+                  element: <Family />
                 },
                 {
-                  path:'employjob',
-                  element:<EmployJob/>
+                  path: 'employjob',
+                  element: <EmployJob />
                 },
                 {
-                  path:'assets',
-                  element:<Assets/>
+                  path: 'assets',
+                  element: <Assets />
                 },
               ]
             },
@@ -66,7 +92,7 @@ const Router = () => {
 
   return <RouterProvider router={router} />;
 
-  
+
 };
 
 export default Router;
