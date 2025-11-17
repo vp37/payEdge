@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import '../../components/css/Upload_File.css'
+import '../../components/css/UploadFile.css'
 
 const UploadPayslip = () => {
   const [file, setFile] = useState(null);

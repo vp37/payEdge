@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../../components/css/Generated_paySlip.css";
+import "../../components/css/GeneratedpaySlip.css";
 
 const GeneratePayslip = () => {
   const [form, setForm] = useState({
