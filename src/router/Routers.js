@@ -12,8 +12,12 @@ import Assets from '../employeepages/Assets'
 import EmployeeLayout from '../components/layout/EmployeeLayout'
 import PaySlips from '../salarypages/admin/PaySlips';
 import AdminLayout from '../components/layout/AdminLayout';
-import Generator_Payslips from '../salarypages/admin/Generator_Payslips';
-import Upload_File from '../salarypages/admin/Upload_File'
+import GeneratorPayslips from '../salarypages/admin/GeneratorPayslips';
+import UploadFile from '../salarypages/admin/Upload_File'
+import EmployeeList from '../salarypages/admin/EmployeeList'
+import ArrearsAdd from '../salarypages/admin/ArrearsAdd'
+import SalaryStructure from '../salarypages/admin/SalaryStructure'
+import PaySlipHistory from '../salarypages/admin/PaySlipHistory'
 
 const Router = () => {
   const router = createBrowserRouter([
@@ -46,16 +50,32 @@ const Router = () => {
               children: [
                 {
                   index:"true",
-                  element: <Generator_Payslips />,
+                  element: <GeneratorPayslips />,
                 },
                 {
                   path: 'payslips/generator',
-                  element: <Generator_Payslips />,
+                  element: <GeneratorPayslips />,
                 },
                 {
                   path: 'upload',
-                  element: <Upload_File />,
+                  element: <UploadFile />,
                 },
+                {
+                  path: 'list',
+                  element: <EmployeeList />,
+                },
+                {
+                  path:'arrears',
+                  element:<ArrearsAdd/>
+                },
+                {
+                  path:'salary-structure',
+                  element:<SalaryStructure/>
+                },
+                 {
+                  path:'payslip-history',
+                  element:<PaySlipHistory/>
+                }
               ],
             },
             {
